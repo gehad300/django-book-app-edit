@@ -1,0 +1,18 @@
+{% extends "landingpage/layout.html" %}
+
+{% load static %}
+  {% block content%}
+
+    <div id="page-top">
+        <header class=" d-flex align-items-center mt-5">
+            <div class="container px-4 px-lg-5 text-center">
+                <h1  class="page-title ">Welcome to Book Site</h1>
+                <h3 class="mb-5"><em>Admin  website jsut  for Editing Books</em></h3>
+                <a class="btn btn-primary btn-xl" href="{% url  'All_Books' %}">Go To Books</a>
+          
+        </header>
+    </div>
+      
+    </div>
+
+    {% endblock %}

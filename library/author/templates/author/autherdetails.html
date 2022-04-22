@@ -1,0 +1,36 @@
+{% extends "landingpage/layout.html" %} {% block content %}
+<table class="table continer text-center border border-success">
+  <thead>
+     <h4 class="bg-light text-dark text-center"> Author Name: {{ author_name.name }}</h4>
+  </thead>
+  <thead class="thead-dark bg-dark text-light">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for book in Book_author %}
+
+    <tr>
+      <th scope="row">{{ book.id }}</th>
+      <td><h5>{{ book.name }}</h5></td>
+      <td>
+        <a href="{% url 'book_page' book.id %}" class="btn btn-dark"
+          >Go to Book: {{ book.name }}</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td class="text-center">
+        <a href="{% url  'All_Books' %}" class="btn btn-success">Go Home</a>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+{% endblock content %}

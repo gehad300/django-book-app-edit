@@ -1,0 +1,10 @@
+footer.bg-dark.text-center.text-white {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.bookimage{
+    width: 400px;
+    height: 400px;
+}
